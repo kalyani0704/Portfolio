@@ -10,22 +10,52 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        function Sidebar() {
+            var mobileMenu = document.getElementById("mobile-nav");
+
+            if (mobileMenu.style.display === "flex") {
+                mobileMenu.style.display = "none";
+            }
+            else {
+                mobileMenu.style.display = "flex";
+            }
+        }
+    </script>
 </head>
 
 <body>
     <!-- Navbar Section -->
     <div class="main-nav">
-        <ul class="mid-nav">
+
+        <!-- Desktop Navbar  -->
+
+        <div class="mid-nav">
             <img src="https://cdn.icon-icons.com/icons2/2248/PNG/512/alpha_k_box_icon_138963.png" alt="Logo" />
             <a href="#project">Project</a>
             <a href="#education">Education</a>
             <a href="#contact">Contact</a>
             <a href="https://drive.google.com/drive/folders/1QaN0Uh7HzEsrduL5Cs25O9haPU-gIHTn?usp=sharing"
                 target="_blank">Certificate</a>
-            <a href="https://drive.google.com/file/d/1jLXmzcKf2I6naqzc_EdLY8N81XAKDSsE/view?usp=sharing" class="btn" target="_blank">Resume <i class="fa-solid fa-arrow-right" style="color: #000000"></i></a>
-            <i class="fa-solid fa-bars-staggered" style="color: #000000"></i>
-        </ul>
+            <a href="https://drive.google.com/file/d/1jLXmzcKf2I6naqzc_EdLY8N81XAKDSsE/view?usp=sharing" class="btn"
+                target="_blank">Resume <i class="fa-solid fa-arrow-right" style="color: #000000"></i></a>
+            <i class="fa-solid fa-bars-staggered" style="color: #000000" onclick="Sidebar()"></i>
+        </div>
+
+        <!-- Mobile Menu -->
+
+        <div class="mobile-menu" id="mobile-nav">
+            <a href="#project">Project</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+            <a href="https://drive.google.com/drive/folders/1QaN0Uh7HzEsrduL5Cs25O9haPU-gIHTn?usp=sharing"
+                target="_blank">Certificate</a>
+            <a href="https://drive.google.com/file/d/1jLXmzcKf2I6naqzc_EdLY8N81XAKDSsE/view?usp=sharing" class="btn"
+                target="_blank">Resume <i class="fa-solid fa-arrow-right" style="color: #000000"></i></a>
+            <!-- <i class="fa-solid fa-bars-staggered" style="color: #000000"></i> -->
+        </div>
     </div>
+
 
     <!-- Header Section -->
 

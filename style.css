@@ -47,19 +47,19 @@ html {
     margin: 10px;
 }
 
-ul img {
+.mid-nav img {
     max-width: 4em;
     margin-right: auto;
 }
 
-ul a {
+a {
     text-decoration: none;
     color: black;
     font-size: 17px;
     font-weight: 600;
 }
 
-ul .btn {
+.btn {
     background: rgb(222, 222, 11);
     padding: 10px 20px;
     border-radius: 50px;
@@ -426,12 +426,32 @@ footer .upside a {
     cursor: pointer;
 }
 
+.mobile-menu {
+    display: none;
+}
 
 /* Media Queries For Phone */
 
 
 @media screen and (max-width:700px) {
-    ul a {
+
+    /* Css For Mobile Menu */
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        /* margin: 10px; */
+        padding: 10px;
+    }
+
+    .mobile-menu a {
+        margin: 10px;
+    }
+
+
+    /* Css For Desktop Navbar */
+    .mid-nav a {
         display: none;
     }
 
