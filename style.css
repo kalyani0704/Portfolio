@@ -437,7 +437,7 @@ footer .upside a {
 
     /* Css For Mobile Menu */
     .mobile-menu {
-        display: flex;
+        display: none;
         flex-direction: column;
         justify-content: center;
         align-items: flex-end;
@@ -468,7 +468,7 @@ footer .upside a {
     .main-head p {
         width: 100%;
         padding: 20px;
-        text-align: left;
+        text-align: center;
     }
 
     .main-head h3 {
