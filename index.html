@@ -1,359 +1,581 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html class="scroll-smooth" lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kalyani Mali : Portfolio Website 🦄</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3468/3468261.png" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script>
-        function Sidebar() {
-            var mobileMenu = document.getElementById("mobile-nav");
-
-            if (mobileMenu.style.display === "flex") {
-                mobileMenu.style.display = "none";
-            }
-            else {
-                mobileMenu.style.display = "flex";
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Kalyani Mali | UI/UX Designer | Web Developer</title>
+    <meta name="description"
+        content="Kalyani Mali is a UI/UX Designer and Web Developer from India specializing in user-centered design, responsive websites, and modern digital experiences.">
+    <meta name="keywords"
+        content="Kalyani Mali, UI UX Designer India, Web Developer Portfolio, Frontend Developer, Tailwind CSS Developer, Nashik Developer">
+    <meta name="author" content="Kalyani Mali">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Kalyani Mali - UI/UX Designer & Web Developer">
+    <meta property="og:description"
+        content="Portfolio of Kalyani Mali showcasing UI/UX design and web development projects.">
+    <meta property="og:image" content="https://yourdomain.com/preview.png">
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kalyani Mali Portfolio">
+    <meta name="twitter:description" content="UI/UX Designer & Web Developer portfolio.">
+    <meta name="twitter:image" content="https://yourdomain.com/preview.png">
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3237/3237420.png ">
+    <link rel="canonical" href="https://yourdomain.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#434658",
+                        "surface-container-low": "#f4f3f2",
+                        "secondary-container": "#e0e1f8",
+                        "on-background": "#1a1c1c",
+                        "outline-variant": "#c5c5d9",
+                        "on-primary-fixed": "#000965",
+                        "surface-tint": "#2f44f4",
+                        "outline": "#757688",
+                        "on-secondary-container": "#616376",
+                        "on-primary-fixed-variant": "#0020dd",
+                        "secondary-fixed": "#e0e1f8",
+                        "on-secondary-fixed": "#181b2b",
+                        "primary-fixed-dim": "#bdc2ff",
+                        "secondary-fixed-dim": "#c4c5db",
+                        "primary-fixed": "#dfe0ff",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#dadad9",
+                        "tertiary-fixed-dim": "#ffb59b",
+                        "on-surface": "#1a1c1c",
+                        "on-error-container": "#93000a",
+                        "surface-bright": "#faf9f8",
+                        "surface": "#faf9f8",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#faf9f8",
+                        "secondary": "#5b5d70",
+                        "on-surface-variant": "#444656",
+                        "on-tertiary-fixed-variant": "#822800",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#932f00",
+                        "primary-container": "#3d51ff",
+                        "surface-container-high": "#e9e8e7",
+                        "on-tertiary-container": "#ffe4dc",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e3e2e1",
+                        "surface-container": "#eeeeed",
+                        "primary": "#1a31e7",
+                        "on-primary-container": "#e8e8ff",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed": "#380d00",
+                        "inverse-primary": "#bdc2ff",
+                        "tertiary-fixed": "#ffdbcf",
+                        "tertiary-container": "#bc3e00",
+                        "surface-container-highest": "#e3e2e1",
+                        "inverse-surface": "#2f3130",
+                        "inverse-on-surface": "#f1f0f0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    }
+                },
             }
         }
     </script>
+    <style>
+        body {
+            font-family: "Manrope", sans-serif
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-serif {
+            font-family: "Newsreader", serif
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+        }
+    </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Kalyani Mali",
+  "url": "https://yourdomain.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/dev-kalyani/",
+    "https://github.com/kalyani0704",
+    "https://www.behance.net/kalyani07"
+  ],
+  "jobTitle": "UI/UX Designer & Web Developer",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Nashik",
+    "addressCountry": "India"
+  }
+}
+</script>
 </head>
 
-<body>
-    <!-- Navbar Section -->
-    <div class="main-nav">
-
-        <!-- Desktop Navbar  -->
-
-        <div class="mid-nav">
-            <img src="https://cdn.icon-icons.com/icons2/2248/PNG/512/alpha_k_box_icon_138963.png" alt="Logo" />
-            <a href="#project">Project</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
-            <a href="https://drive.google.com/drive/folders/1QaN0Uh7HzEsrduL5Cs25O9haPU-gIHTn?usp=sharing"
-                target="_blank">Certificate</a>
-            <a href="https://drive.google.com/file/d/1x5Z4GBA7escKGZjkHSN1EDZ1L-_rYuim/view?usp=sharing" class="btn"
-                target="_blank">Resume <i class="fa-solid fa-arrow-right" style="color: #000000"></i></a>
-            <i class="fa-solid fa-bars-staggered" style="color: #000000" onclick="Sidebar()"></i>
+<body
+    class="bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container overflow-x-hidden">
+    <!-- Top Navigation Shell -->
+    <nav class="fixed top-0 w-full z-50 bg-[#faf9f8]/70 backdrop-blur-md">
+        <div class="flex justify-between items-center px-8 py-6 max-w-8xl mx-auto w-full">
+            <a class="font-serif italic text-2xl text-[#1a1c1c]" href="#">Kalyani Mali</a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-[#3D51FF] font-bold border-b-2 border-[#3D51FF] pb-1" href="#atelier">Work</a>
+                <a class="text-[#1a1c1c] opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    href="#journey">Journey</a>
+                <a class="text-[#1a1c1c] opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    href="#academic">Academic</a>
+                <a class="text-[#1a1c1c] opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    href="#contact">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a class="sm:inline-flex bg-on-surface text-surface px-6 py-2.5 rounded-full font-body font-bold text-sm hover:bg-on-surface-variant transition-all"
+                    href="Resume.pdf" download>Resume</a>
+                <a class="hidden bg-primary-container text-on-primary px-6 py-2.5 rounded-xl font-body font-bold text-sm hover:bg-primary transition-all shadow-md shadow-primary/10"
+                    href="#contact">Hire Me</a>
+            </div>
         </div>
-
-        <!-- Mobile Menu -->
-
-        <div class="mobile-menu" id="mobile-nav">
-            <a href="#project">Project</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
-            <a href="https://drive.google.com/drive/folders/1QaN0Uh7HzEsrduL5Cs25O9haPU-gIHTn?usp=sharing"
-                target="_blank">Certificate</a>
-            <a href="https://drive.google.com/file/d/1x5Z4GBA7escKGZjkHSN1EDZ1L-_rYuim/view?usp=sharing" class="btn"
-                target="_blank">Resume <i class="fa-solid fa-arrow-right" style="color: #000000"></i></a>
-            <!-- <i class="fa-solid fa-bars-staggered" style="color: #000000"></i> -->
+    </nav>
+    <!-- Side Navigation (Web Only) -->
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex flex-col justify-center items-center px-8 pt-20 mt-5">
+        <div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-8">
+                <p class="font-body text-primary font-bold tracking-widest uppercase text-sm animate-slide-up">
+                    Hi, I’m Kalyani - a developer who loves building clean and fast web apps.
+                </p>
+                <h1
+                    class="font-serif text-4xl md:text-8xl leading-tight text-on-surface -tracking-[0.02em] font-medium">
+                    Crafting digital experiences with <span class="italic text-tertiary">purpose</span> and soul.
+                </h1>
+                <div class="flex flex-wrap items-center gap-6 pt-4">
+                    <a class="flex items-center gap-2 font-body font-bold text-on-surface-variant hover:text-on-surface transition-colors border border-outline-variant/90 px-6 py-3 rounded-full bg-white/90"
+                        href="Resume.pdf" download>
+                        <span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+            <div class="lg:col-span-5 relative">
+                <div
+                    class="aspect-[4/5] rounded-[2rem] overflow-hidden bg-surface-container-low shadow-xl transform rotate-3 z-10 relative">
+                    <img alt="Kalyani Mali"
+                        class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                        data-alt="Kalyani Mali UI UX Designer and Web Developer portrait" src="card3.jpg" />
+                </div>
+                <div
+                    class="absolute -bottom-10 -right-10 bg-surface-container-lowest p-8 rounded-xl shadow-2xl hidden md:block max-w-[300px] z-20">
+                    <p class="font-serif italic text-lg leading-snug">"Code is just the medium. Impact is the message."
+                    </p>
+                </div>
+            </div>
         </div>
-    </div>
-
-
-    <!-- Header Section -->
-
-    <header>
-        <div class="main-head">
-            <img src="https://img.freepik.com/free-vector/hacker-concept-illustration_114360-6271.jpg?w=740&t=st=1688453413~exp=1688454013~hmac=9143334491ed6da3501344b71571dece2ff76f0064070d059f169a6f39274ec5"
-                alt="" class="illu" />
-            <h3>Hi I'm Kalyani</h3>
-            <h1>Coding with Passion: Shaping the World with Every Line</h1>
-            <p>
-                From back-end architecture to front-end design, I have a holistic
-                approach to software development. By combining technical expertise
-                with a creative mindset, I build intuitive interfaces and robust
-                functionalities that elevate user experiences. Let's embark on a
-                journey of innovation and transform ideas into reality.
-            </p>
-            <a href="#contact">Connect With Me</a>
+        <div class="absolute bottom-12 flex flex-col items-center gap-2 opacity-40">
+            <span class="text-[10px] font-bold uppercase tracking-[0.2em]">Scroll to Explore</span>
+            <div class="w-[1px] h-12 bg-on-surface/20 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1/2 bg-primary animate-bounce"></div>
+            </div>
         </div>
     </header>
-
-    <!-- Thing I Can Do Section -->
-    <!-- Part 1 -->
-
-    <div class="things" id="Scroll1">
-        <div class="section">
-            <h1>Areas of Expertise</h1>
-            <p class="title">I'm a passionate Web Developer from India.</p>
-            <div class="main-part">
-                <img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-2165.jpg?w=740&t=st=1687960123~exp=1687960723~hmac=b7f788146e654bd97871830deb2c3d6943d70f394d52d62b9dbeb00fda05252f"
-                    alt="" />
-                <div class="information">
-                    <h2>Frontend Development</h2>
-                    <div class="icons">
-                        <i class="fa-brands fa-html5" style="color: #ff0000"></i>
-                        <i class="fa-brands fa-css3-alt" style="color: #005eff"></i>
-                        <i class="fa-brands fa-js" style="color: #59ff00"></i>
-                        <i class="fa-brands fa-bootstrap" style="color: #3e6ec1"></i>
-                    </div>
-                    <div class="text-para">
-                        <p>
-                            <i class="fa-solid fa-bolt" style="color: #66ff00"></i> Develop
-                            responsive and interactive user interfaces using HTML, CSS, and
-                            JavaScript.
-                        </p>
-
-                        <p>
-                            <i class="fa-solid fa-bolt" style="color: #66ff00"></i> Optimize
-                            website performance through efficient coding practices, code
-                            minification, and image optimization.
-                        </p>
-
-                        <p>
-                            <i class="fa-solid fa-bolt" style="color: #66ff00"></i>Implement
-                            responsive design principles to create engaging user experiences
-                            across different devices and screen sizes.
-                        </p>
-
-                        <p>
-                            <i class="fa-solid fa-bolt" style="color: #66ff00"></i> Use
-                            version control systems like Git to manage codebase.
-                        </p>
-                    </div>
+    <!-- The Journey Section -->
+    <section class="py-20 bg-surface-container-low" id="journey">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 items-start">
+                <div class="lg:col-span-4 lg:sticky top-32">
+                    <h2 class="font-serif text-5xl mb-6">The Journey</h2>
+                    <p class="font-body text-on-surface-variant leading-relaxed text-lg">
+                        My path is built on curiosity and a drive to craft software that is as performant as it is
+                        beautiful.
+                    </p>
                 </div>
-            </div>
-
-            <!-- Part - 2 -->
-
-            <div class="main-part">
-                <img src="https://img.freepik.com/free-vector/upload-concept-illustration_114360-7025.jpg?w=740&t=st=1688109217~exp=1688109817~hmac=2fb872d3f91602c32cc19b813d6eb02290e9c932bc0ab20b685cdcad35918a2b"
-                    alt="" />
-                <div class="information">
-                    <h2>Backend Development</h2>
-                    <div class="icons">
-                        <i class="fa-brands fa-node-js" style="color: green"></i>
-                        <i class="fa-brands fa-java" style="color: red"></i>
-                        <i class="fa-brands fa-python" style="color: #1aa4a4"></i>
-                        <i class="fa-solid fa-database" style="color: #030811"></i>
-                    </div>
-                    <div class="text-para">
-                        <p>
-                            <i class="fa-solid fa-bolt" style="color: #66ff00"></i> Developing robust and scalable
-                            backend systems using languages like Python, Java, or Node.js.
-                        </p>
-
-                        <p>
-                            <i class="fa-solid fa-bolt" style="color: #66ff00"></i> Utilizing databases like MySQL,
-                            PostgreSQL, or MongoDB for efficient data storage and retrieval.
-                        </p>
-
-                        <p>
-                            <i class="fa-solid fa-bolt" style="color: #66ff00"></i>Working with cloud platforms, such as
-                            AWS or Azure, to deploy and manage backend services.
-                        </p>
-
-                        <p>
-                            <i class="fa-solid fa-bolt" style="color: #66ff00"></i> Optimizing database queries and
-                            improving overall system performance.
+                <div class="lg:col-span-8 space-y-32">
+                    <div class="relative pl-12 border-l border-outline-variant/30">
+                        <span class="absolute -left-[5px] top-0 w-2 h-2 rounded-full bg-tertiary"></span>
+                        <h3 class="font-serif text-3xl mb-4 italic">Professional Growth</h3>
+                        <p class="font-body text-xl text-on-surface-variant leading-relaxed max-w-2xl">
+                            With over 2 years of hands-on experience in web development, I've transitioned from
+                            freelance tinkering to architecting scalable web applications. My focus has always been on
+                            delivering clean, maintainable codebases that serve human needs.
                         </p>
                     </div>
-                </div>
-            </div>
-
-            <!-- Part - 3 -->
-
-            <div class="main-part">
-                <img src="https://img.freepik.com/free-vector/server-concept-illustration_114360-4128.jpg?w=740&t=st=1688109339~exp=1688109939~hmac=6c34b96c6f722e1bf167cd18716727aab64d38d1529ae611d71f096b0e1c3a93"
-                    alt="" />
-                <div class="information">
-                    <h2>Web Hosting</h2>
-                    <div class="icons">
-                        <i class="fa-brands fa-github" style="color: #000000"></i>
-                        <i class="fa-brands fa-aws" style="color: #5522a7"></i>
-                        <i class="fa-solid fa-server" style="color: #030801"></i>
-                        <i class="fa-brands fa-linode" style="color: forestgreen"></i>
-                    </div>
-                    <div class="text-para">
-                        <p>
-                            <i class="fa-solid fa-bolt" style="color: #66ff00"></i> Proficient in web hosting on various
-                            platforms, including GitHub Pages, Vercel, and Netlify.
+                    <div class="relative pl-12 border-l border-outline-variant/30">
+                        <span class="absolute -left-[5px] top-0 w-2 h-2 rounded-full bg-primary"></span>
+                        <h3 class="font-serif text-3xl mb-4 italic">The Technical Craftsman</h3>
+                        <p class="font-body text-xl text-on-surface-variant leading-relaxed max-w-2xl">
+                            I believe technical excellence and design intent are inseparable. My toolkit is built on
+                            these three pillars:
                         </p>
-                        <p>
-                            <i class="fa-solid fa-bolt" style="color: #66ff00"></i> Expertise in optimizing website
-                            performance, caching, and content delivery through
-                        </p>
-
-                        <p>
-                            <i class="fa-solid fa-bolt" style="color: #66ff00"></i> Extensive experience in deploying
-                            static websites and web applications using GitHub Pages, Vercel, and Netlify.
-                        </p>
-
-                        <p>
-                            <i class="fa-solid fa-bolt" style="color: #66ff00"></i>Knowledgeable in setting up
-                            serverless functions, server-side rendering (SSR), and other advanced hosting configurations
-                            on Vercel and Netlify.
-                        </p>
-
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                            <div class="p-6 bg-surface-container-lowest rounded-xl">
+                                <span class="material-symbols-outlined text-primary mb-4 block"
+                                    data-icon="bolt">bolt</span>
+                                <h4 class="font-bold mb-2">Performance</h4>
+                                <p class="text-sm opacity-70 text-on-surface-variant">Every millisecond counts toward
+                                    user delight.</p>
+                            </div>
+                            <div class="p-6 bg-surface-container-lowest rounded-xl">
+                                <span class="material-symbols-outlined text-primary mb-4 block"
+                                    data-icon="brush">brush</span>
+                                <h4 class="font-bold mb-2">Clean UI</h4>
+                                <p class="text-sm opacity-70 text-on-surface-variant">Intentional whitespace and
+                                    editorial layouts.</p>
+                            </div>
+                            <div class="p-6 bg-surface-container-lowest rounded-xl">
+                                <span class="material-symbols-outlined text-primary mb-4 block"
+                                    data-icon="public">public</span>
+                                <h4 class="font-bold mb-2">Real World</h4>
+                                <p class="text-sm opacity-70 text-on-surface-variant">Building solutions that solve
+                                    actual human problems.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Learning And Growth Section -->
-
-    <div class="learning" id="education">
-        <h1>Learning And Growth</h1>
-        <p class="title">Education : Empowering Minds, Shaping Futures</p>
-        <div class="cover">
-            <div class="card">
-                <img src="https://img.freepik.com/free-vector/businesswoman-concept-illustration_114360-2104.jpg?w=740&t=st=1688101442~exp=1688102042~hmac=c2db2af19de539798672169b29bfbbb5d7a33b8d625b2731dcaf0f65387c007b"
-                    alt="" />
-                <main>
-                    <h2>Moolji Jaitha College</h2>
-                    <p class="date">August 2019 - July 2021</p>
-                    <div class="edu-text-para">
-                        <p>
-                            <i class="fa-solid fa-check" style="color: #000205"></i>
-                            Completed My Higher Eduction From M.J Collage.
-                        </p>
-                        <p>
-                            <i class="fa-solid fa-check" style="color: #000205"></i> Science
-                            Stream Which I Choosed In 11th And 12th.
-                        </p>
-                        <p>
-                            <i class="fa-solid fa-check" style="color: #000205"></i>
-                            Lots Of New Things I Learned and See In Science.
-                        </p>
+    </section>
+    <!-- Academic Foundation Section -->
+    <section class="py-20" id="academic">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <div class="lg:col-span-4">
+                    <h2 class="font-serif text-5xl">Academic Foundation</h2>
+                    <p class="mt-6 text-on-surface-variant text-lg">Theoretical depth meets practical execution.</p>
+                </div>
+                <div class="lg:col-span-8">
+                    <div class="space-y-16">
+                        <div class="flex flex-col md:flex-row gap-4 md:gap-12 pb-12 border-b border-outline-variant/20">
+                            <span class="font-mono text-xs opacity-40 shrink-0 mt-2">2024 — 2026</span>
+                            <div>
+                                <h3 class="font-serif text-2xl font-medium">Master of Computer Applications</h3>
+                                <p class="font-body text-primary font-bold mt-1">Sandip Foundation</p>
+                                <p class="mt-4 text-on-surface-variant max-w-xl">
+                                    Specialized in <span class="text-on-surface font-semibold">
+                                        Python and Java programming.</span>
+                                    UI/UX design principles and software development methodologies.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                </main>
-            </div>
-            <div class="card">
-                <img src="https://img.freepik.com/free-vector/blog-post-concept-illustration_114360-244.jpg?w=740&t=st=1688103229~exp=1688103829~hmac=7972ee3bd250443dd308782bf4c75b045fdb49bc8f9e19ea87a7e124395f9e2c"
-                    alt="" />
-                <main>
-                    <h2>I.M.R College</h2>
-                    <p class="date">October 2021 - Present</p>
-                    <div class="edu-text-para">
-                        <p>
-                            <i class="fa-solid fa-check" style="color: #000205"></i>
-                            Learned Fundamentals of Software and Hardware.
-                        </p>
-                        <p>
-                            <i class="fa-solid fa-check" style="color: #000205"></i>
-                            Learned Lots of Programming Language Like C, C++, Java, C#.
-                        </p>
-                        <p>
-                            <i class="fa-solid fa-check" style="color: #000205"></i>
-                            Making Projets and introduced with lots of new technology.
-                        </p>
+                    <div class="lg:col-span-8">
+                        <div class="space-y-16">
+                            <div
+                                class="flex flex-col md:flex-row gap-4 md:gap-12 pb-12 border-b border-outline-variant/20">
+                                <span class="font-mono text-xs opacity-40 shrink-0 mt-2">2021 — 2024</span>
+                                <div>
+                                    <h3 class="font-serif text-2xl font-medium">Bachelor of Computer Applications</h3>
+                                    <p class="font-body text-primary font-bold mt-1">KCES's IMR</p>
+                                    <p class="mt-4 text-on-surface-variant max-w-xl">
+                                        Specialized in <span class="text-on-surface font-semibold">Web Development and
+                                            basic programming</span>. Focused on building a strong foundation in
+                                        algorithms,
+                                        data structures, and software design.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </main>
+                </div>
             </div>
         </div>
-    </div>
-
-    <!-- Projects in the Spotlight Section -->
-
-
-    <div class="project-section" id="project">
-        <h1>Projects in the Spotlight</h1>
-        <p class="title">Discover the Canvas of My Creativity: Showcasing Projects that Speak Volumes.</p>
-        <!-- Project Card - 1 -->
-        <div class="project-flex-cover">
-            <main>
-                <div class="project-card">
-                    <img src="https://i.ibb.co/CwdpHWC/Screenshot-2023-08-25-193338.png" alt="">
-                    <h2>Sign Up || Dribbble</h2>
-                    <p>This is a sign up page of dribbble, technology is used in this webpage is HTML5, CSS3.</p>
-                    <a href="https://github.com/kalyani0704/Dribble-Sign-Up" class="github-btn" target="_blank"> <i
-                            class="fa-brands fa-github" style="color: #ffffff;"></i></a>
-                    <a href="https://dribble-sign-up.vercel.app/" class="demo-btn" target="_blank">Demo <i
-                            class="fa-solid fa-arrow-right" style="color: #000000;"></i></a>
+    </section>
+    <!-- The Atelier (Projects) Section -->
+    <section class="py-20 bg-surface" id="atelier">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="mb-24 flex flex-col md:flex-row justify-between items-end gap-8">
+                <div class="max-w-2xl">
+                    <span class="text-primary font-bold uppercase tracking-widest text-xs">Portfolio</span>
+                    <h2 class="font-serif text-6xl mt-4">Selected Works</h2>
                 </div>
-
-                <!-- Project Card - 2 -->
-
-                <div class="project-card">
-                    <img src="https://i.ibb.co/18fM6Sk/Screenshot-2023-08-25-194120.png" alt="">
-                    <h2>Grid Webpage</h2>
-                    <p>This is a grid layout webpage, technology is used in this webpage is HTML5, CSS3,
-                        Grid.
+                <p class="font-body text-on-surface-variant italic">Refined over months, built for impact.</p>
+            </div>
+            <div class="space-y-60">
+                <!-- Project 1 -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center group">
+                    <div class="lg:col-span-7">
+                        <div
+                            class="relative aspect-[16/10] overflow-hidden rounded-[1rem] bg-surface-container-low transition-all duration-500 group-hover:scale-[1.02] cursor-pointer shadow-lg">
+                            <img alt="Lumina Project" class="w-full h-full object-cover"
+                                data-alt="clean minimalist dashboard interface"
+                                src="https://i.ibb.co/CwdpHWC/Screenshot-2023-08-25-193338.png" />
+                            <span class="text-white font-bold font-serif text-primary italic">View Project</span>
+                            <i class="fas fa-external-link-alt text-white"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5">
+                        <span class="font-mono text-xs opacity-40">01 / Web Page</span>
+                        <h3 class="font-serif text-4xl mt-4 mb-8">Dribbble Sign Up</h3>
+                        <div class="space-y-8">
+                            <div>
+                                <h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-2">The
+                                    Description
+                                </h4>
+                                <p class="text-on-surface-variant leading-relaxed">A modern sign-up page for Dribbble
+                                    with an emphasis on user experience and conversion optimization.</p>
+                            </div>
+                            <a class="sm:inline-flex bg-on-surface text-surface px-6 py-2.5 rounded-full font-body font-bold text-sm hover:bg-on-surface-variant transition-all"
+                                href="https://dribble-sign-up.vercel.app/" download>View Project</a>
+                            <div class="p-6 bg-primary/5 rounded-xl border-l-4 border-primary">
+                                <h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-2">Technical
+                                </h4>
+                                <p class="font-serif text-xl text-primary italic lg:text-2xl">HTML, CSS, JavaScript</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center group" style="margin-top: 5rem;">
+                    <div class="lg:col-span-5 order-2 lg:order-1">
+                        <span class="font-mono text-xs opacity-40">02 / E-Commerce</span>
+                        <h3 class="font-serif text-4xl mt-4 mb-8">Kalyani's Coffee</h3>
+                        <div class="space-y-8">
+                            <div>
+                                <h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-2">The
+                                    Description
+                                </h4>
+                                <p class="text-on-surface-variant leading-relaxed">I designed the e-commerce website
+                                    to be
+                                    more visually appealing and user-friendly, focusing on improving the product
+                                    browsing
+                                    experience and streamlining the checkout process.</p>
+                            </div>
+                            <div class="p-6 bg-tertiary/5 rounded-xl border-l-4 border-tertiary">
+                                <h4 class="text-xs font-bold uppercase tracking-widest text-tertiary mb-2">Technical
+                                </h4>
+                                <p class="font-serif text-xl text-tertiary italic lg:text-2xl">HTML, CSS, JavaScript</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7 order-1 lg:order-2">
+                        <div
+                            class="relative aspect-[16/10] overflow-hidden rounded-[1rem] bg-surface-container-low transition-all duration-500 group-hover:scale-[1.02] cursor-pointer shadow-lg">
+                            <img alt="Velvet Project" class="w-full h-full object-cover"
+                                data-alt="editorial style fashion ecommerce website"
+                                src="https://i.ibb.co/z6pPfcD/Screenshot-2023-08-25-193659.png" />
+                            <a href="https://kalyanis-coffee.vercel.app/" target="_blank" rel="noopener noreferrer"
+                                class="absolute inset-0 flex items-center justify-center bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-100 gap-2">
+                                <span class="text-white font-bold font-serif text-primary italic">View Project</span>
+                                <i class="fas fa-external-link-alt text-white"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center group" style="margin-top: 5rem;">
+                    <div class="lg:col-span-7">
+                        <div
+                            class="relative aspect-[16/10] overflow-hidden rounded-[1rem] bg-surface-container-low transition-all duration-500 group-hover:scale-[1.02] cursor-pointer shadow-lg">
+                            <img alt="Lumina Project" class="w-full h-full object-cover"
+                                data-alt="clean minimalist dashboard interface"
+                                src="https://i.ibb.co/CwdpHWC/Screenshot-2023-08-25-193338.png" />
+                            <a href="https://coca-cola-delta.vercel.app/" target="_blank" rel="noopener noreferrer"
+                                class="absolute inset-0 flex items-center justify-center bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-100 gap-2">
+                                <span class="text-white font-bold font-serif text-primary italic">View Project</span>
+                                <i class="fas fa-external-link-alt text-white"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5">
+                        <span class="font-mono text-xs opacity-40">03 / Web Page</span>
+                        <h3 class="font-serif text-4xl mt-4 mb-8">Coco-Cola</h3>
+                        <div class="space-y-8">
+                            <div>
+                                <h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-2">The
+                                    Description
+                                </h4>
+                                <p class="text-on-surface-variant leading-relaxed">A modern, responsive website for the
+                                    iconic Coca-Cola brand, showcasing their products and values.
+                                    The design focuses on vibrant visuals and a user-friendly interface to enhance brand
+                                    engagement.</p>
+                                </p>
+                            </div>
+                            <div class="p-6 bg-primary/5 rounded-xl border-l-4 border-primary">
+                                <h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-2">Technical
+                                </h4>
+                                <p class="font-serif text-xl text-primary italic lg:text-2xl">HTML, CSS, JavaScript</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- The Archive Section (Skills) -->
+    <section class="py-20 bg-surface-container-high/30">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <div class="lg:col-span-4">
+                    <h2 class="font-serif text-5xl mb-8">Skills & Expertise</h2>
+                    <p class="text-on-surface-variant leading-relaxed text-lg">
+                        I combine design thinking with development skills to create intuitive, high-performing digital
+                        products.
                     </p>
-                    <a href="https://github.com/kalyani0704/Coca-Cola-Grid" class="github-btn" target="_blank"> <i
-                            class="fa-brands fa-github" style="color: #ffffff;"></i></a>
-                    <a href="https://coca-cola-delta.vercel.app/" class="demo-btn" target="_blank">Demo <i
-                            class="fa-solid fa-arrow-right" style="color: #000000;"></i></a>
                 </div>
-            </main>
-            <main>
-                <!-- Project Card - 3 -->
-
-                <div class="project-card">
-                    <img src="https://i.ibb.co/z6pPfcD/Screenshot-2023-08-25-193659.png" alt="">
-                    <h2>The Kalyani's Coffee</h2>
-                    <p>This is a commercial webpage of coffee, technology used in this webpage is HTML5,
-                        Css3.
-                    </p>
-                    <a href="https://github.com/kalyani0704/The-Kalyani-s-Coffee" class="github-btn" target="_blank"> <i
-                            class="fa-brands fa-github" style="color: #ffffff;"></i></a>
-                    <a href="https://kalyanis-coffee.vercel.app/" class="demo-btn" target="_blank">Demo <i
-                            class="fa-solid fa-arrow-right" style="color: #000000;"></i></a>
+                <div class="lg:col-span-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                        <div>
+                            <h3
+                                class="font-bold text-xs uppercase tracking-[0.2em] mb-8 border-b border-outline-variant/30 pb-4">
+                                Frontend &amp; Core</h3>
+                            <div class="flex flex-wrap gap-3">
+                                <span
+                                    class="px-5 py-2 rounded-full bg-secondary-container text-on-secondary-fixed-variant text-sm font-medium">HTML</span>
+                                <span
+                                    class="px-5 py-2 rounded-full bg-secondary-container text-on-secondary-fixed-variant text-sm font-medium">CSS</span>
+                                <span
+                                    class="px-5 py-2 rounded-full bg-secondary-container text-on-secondary-fixed-variant text-sm font-medium">Javascript</span>
+                                <span
+                                    class="px-5 py-2 rounded-full bg-secondary-container text-on-secondary-fixed-variant text-sm font-medium">Tailwind
+                                    CSS</span>
+                                <span
+                                    class="px-5 py-2 rounded-full bg-secondary-container text-on-secondary-fixed-variant text-sm font-medium">Responsive
+                                    Design</span>
+                            </div>
+                            <h3
+                                class="font-bold text-xs uppercase tracking-[0.2em] mb-8 mt-12 border-b border-outline-variant/30 pb-4">
+                                UI/UX &amp; Design</h3>
+                            <div class="flex flex-wrap gap-3">
+                                <span
+                                    class="px-5 py-2 rounded-full bg-secondary-container text-on-secondary-fixed-variant text-sm font-medium">Figma</span>
+                                <span
+                                    class="px-5 py-2 rounded-full bg-secondary-container text-on-secondary-fixed-variant text-sm font-medium">Wireframing</span>
+                                <span
+                                    class="px-5 py-2 rounded-full bg-secondary-container text-on-secondary-fixed-variant text-sm font-medium">Prototyping</span>
+                                <span
+                                    class="px-5 py-2 rounded-full bg-secondary-container text-on-secondary-fixed-variant text-sm font-medium">Design
+                                    Systems</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3
+                                class="font-bold text-xs uppercase tracking-[0.2em] mb-8 border-b border-outline-variant/30 pb-4">
+                                Tools &amp; Workflow</h3>
+                            <div class="flex flex-wrap gap-3">
+                                <span
+                                    class="px-5 py-2 rounded-full bg-surface-container-lowest border border-outline-variant/20 text-on-surface-variant text-sm">Figma</span>
+                                <span
+                                    class="px-5 py-2 rounded-full bg-surface-container-lowest border border-outline-variant/20 text-on-surface-variant text-sm">Git
+                                    / GitHub</span>
+                                <span
+                                    class="px-5 py-2 rounded-full bg-surface-container-lowest border border-outline-variant/20 text-on-surface-variant text-sm">VS
+                                    Code</span>
+                                <span
+                                    class="px-5 py-2 rounded-full bg-surface-container-lowest border border-outline-variant/20 text-on-surface-variant text-sm">Canva</span>
+                                <span
+                                    class="px-5 py-2 rounded-full bg-surface-container-lowest border border-outline-variant/20 text-on-surface-variant text-sm">Photoshop</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <!-- Project Card - 4 -->
-
-                <div class="project-card">
-                    <img src="https://i.ibb.co/NrsF6xt/Screenshot-2023-08-25-194559.png" alt="">
-                    <h2>Mega Footer || GFG</h2>
-                    <p>This is a mega footer of geeksforgeeks, technology used in this footer is HTML5, Css3.
-                    </p>
-                    <a href="https://github.com/kalyani0704/GFG-Footer" class="github-btn" target="_blank"> <i
-                            class="fa-brands fa-github" style="color: #ffffff;"></i></a>
-                    <a href="https://gfg-footer.vercel.app/" class="demo-btn" target="_blank">Demo <i
-                            class="fa-solid fa-arrow-right" style="color: #000000;"></i></a>
-                </div>
-            </main>
+            </div>
         </div>
-    </div>
-
-    <!-- Footer Section -->
-    <footer>
-        <div class="main-footer" id="contact">
-            <div class="inside-footer-one">
-                <h1>Reach Out to me!</h1>
-                <p>
-                    Discuss A Project Or Just Want To Say HI ? My Inbox Is Open For All
+    </section>
+    <!-- Contact Section -->
+    <section class="py-20 relative overflow-hidden" id="contact">
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none">
+        </div>
+        <div class="max-w-5xl mx-auto px-8 relative z-10">
+            <div class="text-center">
+                <h2 class="font-serif text-3xl md:text-7xl mb-6">Let’s build something <span
+                        class="italic text-primary">impactful</span> together.</h2>
+                <div class="mt-8 flex flex-col items-center gap-4">
+                    <a class="font-serif italic text-xl lg:text-3xl text-on-surface hover:text-primary transition-colors underline decoration-outline-variant/40 underline-offset-8"
+                        href="mailto:malikalyani0715@gmail.com">malikalyani0715@gmail.com</a>
+                    <p class="font-body text-on-surface-variant mt-2">Currently available for new opportunities and
+                        collaborations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="w-full py-24 px-8 bg-[#f4f3f2] mt-0 border-t border-outline-variant/10">
+        <div class="flex flex-col md:flex-row justify-between items-start max-w-7xl mx-auto gap-12">
+            <div class="space-y-6">
+                <span class="font-serif italic text-3xl text-[#1a1c1c]">Kalyani Mali</span>
+                <p class="text-[#1a1c1c] opacity-60 font-body max-w-xs">
+                    A digital craftsman passionate about building clean, performant web experiences that solve real
+                    human problems.
                 </p>
-                <p class="hide">
-                    Freelancer || Web Developer || BCA student || Maharashtra,India
-                </p>
-                <div class="foot-icons">
-                    <a href="#">
-                        <i class="fa-brands fa-linkedin" style="color: #ffffff;"></i>
+                <div class="flex gap-6">
+                    <a class="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-sm"
+                        href="https://github.com/kalyani0704">
+                        <span class="material-symbols-outlined text-sm" data-icon="code">code</span>
                     </a>
-                    <a href="#">
-                        <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                    <a class="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-sm"
+                        href="https://www.linkedin.com/in/dev-kalyani/">
+                        <span class="material-symbols-outlined text-sm" data-icon="account_circle">account_circle</span>
                     </a>
-                    <a href="https://github.com/kalyani0704">
-                        <i class="fa-brands fa-github" style="color: #ffffff;"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
-                    </a>
-                    <a href="mailto:malikalyani0715@gmail.com">
-                        <i class="fa-regular fa-envelope" style="color: #ffffff;"></i>
+                    <a class="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-sm"
+                        href="mailto:malikalyani0715@gmail.com">
+                        <span class="material-symbols-outlined text-sm" data-icon="mail">mail</span>
                     </a>
                 </div>
             </div>
-            <div class="inside-footer-two">
-                <img src="mail.svg" alt="">
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-16">
+                <div class="space-y-4">
+                    <h4 class="font-bold text-[10px] uppercase tracking-widest text-primary">Sitemap</h4>
+                    <div class="flex flex-col gap-2">
+                        <a class="text-[#1a1c1c] opacity-60 hover:opacity-100 transition-opacity"
+                            href="#atelier">Work</a>
+                        <a class="text-[#1a1c1c] opacity-60 hover:opacity-100 transition-opacity"
+                            href="#journey">Journey</a>
+                        <a class="text-[#1a1c1c] opacity-60 hover:opacity-100 transition-opacity"
+                            href="#academic">Academic</a>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="font-bold text-[10px] uppercase tracking-widest text-primary">Resources</h4>
+                    <div class="flex flex-col gap-2">
+                        <a class="text-[#1a1c1c] opacity-60 hover:opacity-100 transition-opacity"
+                            href="Resume.pdf">Resume</a>
+                        <a class="text-[#1a1c1c] opacity-60 hover:opacity-100 transition-opacity"
+                            href="https://www.coursera.org/learner/kalyani-mali">Coursera</a>
+                        <a class="text-[#1a1c1c] opacity-60 hover:opacity-100 transition-opacity"
+                            href="https://www.crunchbase.com/person/kalyani-mali-9271">Crunchbase</a>
+                        <a class="text-[#1a1c1c] opacity-60 hover:text-primary transition-colors"
+                            href="https://www.behance.net/kalyani07">Behance</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="upside">
-            <a href="#">
-                <i class="fa-solid fa-arrow-up" style="color: #000000;"></i>
-            </a>
+        <div
+            class="max-w-7xl mx-auto pt-24 mt-24 border-t border-outline-variant/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs opacity-40 font-bold uppercase tracking-widest">
+            <span>© 2026 Kalyani Mali</span>
+            <span>Built with ❤️</span>
         </div>
     </footer>
+    <div
+        class="fixed top-0 left-0 w-8 h-8 bg-primary/20 blur-xl rounded-full pointer-events-none z-[100] transform -translate-x-1/2 -translate-y-1/2 hidden lg:block">
+    </div>
 </body>
 
 </html>
